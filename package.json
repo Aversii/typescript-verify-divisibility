@@ -1,0 +1,27 @@
+{
+  "name": "typescript-verify-divisibility",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aversii/typescript-verify-divisibility.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aversii/typescript-verify-divisibility/issues"
+  },
+  "homepage": "https://github.com/Aversii/typescript-verify-divisibility#readme",
+  "devDependencies": {
+    "@types/prompt-sync": "^4.2.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
