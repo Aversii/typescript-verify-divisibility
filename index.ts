@@ -15,25 +15,28 @@ let getNumberAndConvertToArray=  ():number[] | null|undefined => {
 
 let veriFyDivisibilityBy2 = (arrayOfAbsolut:any)=>{
     if(arrayOfAbsolut && arrayOfAbsolut[arrayOfAbsolut.length-1]%2===0){
-        console.log("é divisivel por 2")
-    }else{    console.log("não é divisivel por 2")
+        return true
+    }else{           
+        return false
     }
 }
 
 let veriFyDivisibilityBy3 = (arrayOfAbsolut:any)=>{
     if(arrayOfAbsolut && arrayOfAbsolut.reduce((acc:any, value:any)=>acc+value,0)%3===0){
-        console.log("é divisivel por 3")
-    }else{    console.log("não é divisivel por 3")
+        return true
+    }else{           
+        return false
     }
 }
+
 
 
 greetings()
 
 let verifyAll= () =>{
     let arrayOfAbsolut = getNumberAndConvertToArray()
-    veriFyDivisibilityBy2(arrayOfAbsolut)
-    veriFyDivisibilityBy3(arrayOfAbsolut)
+    if(veriFyDivisibilityBy2(arrayOfAbsolut)===true){ console.log("It is Divisible by 2")}else{ console.log("It not is Divisible by 2")}
+    if(veriFyDivisibilityBy3(arrayOfAbsolut)===true){ console.log("It is Divisible by 3")}else{ console.log("It not is Divisible by 3")}
 }
 
 verifyAll()

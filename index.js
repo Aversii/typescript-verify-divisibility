@@ -14,24 +14,34 @@ let getNumberAndConvertToArray = () => {
 };
 let veriFyDivisibilityBy2 = (arrayOfAbsolut) => {
     if (arrayOfAbsolut && arrayOfAbsolut[arrayOfAbsolut.length - 1] % 2 === 0) {
-        console.log("é divisivel por 2");
+        return true;
     }
     else {
-        console.log("não é divisivel por 2");
+        return false;
     }
 };
 let veriFyDivisibilityBy3 = (arrayOfAbsolut) => {
     if (arrayOfAbsolut && arrayOfAbsolut.reduce((acc, value) => acc + value, 0) % 3 === 0) {
-        console.log("é divisivel por 3");
+        return true;
     }
     else {
-        console.log("não é divisivel por 3");
+        return false;
     }
 };
 greetings();
 let verifyAll = () => {
     let arrayOfAbsolut = getNumberAndConvertToArray();
-    veriFyDivisibilityBy2(arrayOfAbsolut);
-    veriFyDivisibilityBy3(arrayOfAbsolut);
+    if (veriFyDivisibilityBy2(arrayOfAbsolut) === true) {
+        console.log("It is Divisible by 2");
+    }
+    else {
+        console.log("It not is Divisible by 2");
+    }
+    if (veriFyDivisibilityBy3(arrayOfAbsolut) === true) {
+        console.log("It is Divisible by 3");
+    }
+    else {
+        console.log("It not is Divisible by 3");
+    }
 };
 verifyAll();
