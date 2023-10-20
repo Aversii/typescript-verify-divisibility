@@ -16,9 +16,14 @@ let get2lasts =(arrayOfAbsolut:any):any=>{
     return result
 }
 
+function isDivisibleWithoutRemainder(a:number, b:number) {    
+    return a === Math.floor(a / b) * b? true:false
+}
+
+
 
 let veriFyDivisibilityBy2 = (arrayOfAbsolut:any)=>{
-    if(arrayOfAbsolut && arrayOfAbsolut[arrayOfAbsolut.length-1]%2===0){
+    if(arrayOfAbsolut && isDivisibleWithoutRemainder(arrayOfAbsolut[arrayOfAbsolut.length-1],2)){
         return true
     }else{           
         return false
@@ -26,7 +31,7 @@ let veriFyDivisibilityBy2 = (arrayOfAbsolut:any)=>{
 }
 
 let veriFyDivisibilityBy3 = (arrayOfAbsolut:any)=>{
-    if(arrayOfAbsolut && arrayOfAbsolut.reduce((acc:any, value:any)=>acc+value,0)%3===0){
+    if(arrayOfAbsolut && isDivisibleWithoutRemainder(arrayOfAbsolut.reduce((acc:any, value:any)=>acc+value,0),3) ){
         return true
     }else{           
         return false
@@ -36,7 +41,7 @@ let veriFyDivisibilityBy3 = (arrayOfAbsolut:any)=>{
 let veriFyDivisibilityBy4 = (arrayOfAbsolut:any)=>{
     const getLast2Digits = get2lasts(arrayOfAbsolut)
     const last2DigitsNumber = Number(getLast2Digits.join(''));
-    if(arrayOfAbsolut && arrayOfAbsolut.length>2 && arrayOfAbsolut[arrayOfAbsolut.length-1]===0 && arrayOfAbsolut[arrayOfAbsolut.length-2]===0 || last2DigitsNumber %4===0){
+    if(arrayOfAbsolut && arrayOfAbsolut.length>2 && arrayOfAbsolut[arrayOfAbsolut.length-1]===0 && arrayOfAbsolut[arrayOfAbsolut.length-2]===0 || isDivisibleWithoutRemainder(last2DigitsNumber,4)){
         return true
     }else{           
         return false
@@ -58,7 +63,6 @@ let veriFyDivisibilityBy6 = (arrayOfAbsolut:any)=>{
         return false
     }
 }
-
 
 
 greetings()
