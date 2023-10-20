@@ -35,7 +35,7 @@ let veriFyDivisibilityBy3 = (arrayOfAbsolut) => {
 let veriFyDivisibilityBy4 = (arrayOfAbsolut) => {
     const getLast2Digits = get2lasts(arrayOfAbsolut);
     const last2DigitsNumber = Number(getLast2Digits.join(''));
-    if (arrayOfAbsolut && arrayOfAbsolut.length > 2 && arrayOfAbsolut[arrayOfAbsolut.length - 1] === 0 && arrayOfAbsolut[arrayOfAbsolut.length - 2] === 0 || arrayOfAbsolut.length > 2 && last2DigitsNumber % 4 === 0) {
+    if (arrayOfAbsolut && arrayOfAbsolut.length > 2 && arrayOfAbsolut[arrayOfAbsolut.length - 1] === 0 && arrayOfAbsolut[arrayOfAbsolut.length - 2] === 0 || last2DigitsNumber % 4 === 0) {
         return true;
     }
     else {
