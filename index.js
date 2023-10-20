@@ -42,6 +42,14 @@ let veriFyDivisibilityBy4 = (arrayOfAbsolut) => {
         return false;
     }
 };
+let veriFyDivisibilityBy5 = (arrayOfAbsolut) => {
+    if (arrayOfAbsolut && arrayOfAbsolut[arrayOfAbsolut.length - 1] === 5 || arrayOfAbsolut && arrayOfAbsolut[arrayOfAbsolut.length - 1] === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
 greetings();
 let verifyAll = () => {
     let arrayOfAbsolut = getNumberAndConvertToArray();
@@ -62,6 +70,12 @@ let verifyAll = () => {
     }
     else {
         console.log("It not is Divisible by 4");
+    }
+    if (veriFyDivisibilityBy5(arrayOfAbsolut) === true) {
+        console.log("It is Divisible by 5");
+    }
+    else {
+        console.log("It not is Divisible by 5");
     }
 };
 verifyAll();
