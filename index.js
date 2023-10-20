@@ -12,6 +12,10 @@ let getNumberAndConvertToArray = () => {
     const result = prompt("Pick a number  ");
     return result === null || result === void 0 ? void 0 : result.split("").map(item => Number(item));
 };
+let get2lasts = (arrayOfAbsolut) => {
+    const result = arrayOfAbsolut.slice(-2);
+    return result;
+};
 let veriFyDivisibilityBy2 = (arrayOfAbsolut) => {
     if (arrayOfAbsolut && arrayOfAbsolut[arrayOfAbsolut.length - 1] % 2 === 0) {
         return true;
@@ -22,6 +26,16 @@ let veriFyDivisibilityBy2 = (arrayOfAbsolut) => {
 };
 let veriFyDivisibilityBy3 = (arrayOfAbsolut) => {
     if (arrayOfAbsolut && arrayOfAbsolut.reduce((acc, value) => acc + value, 0) % 3 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
+let veriFyDivisibilityBy4 = (arrayOfAbsolut) => {
+    const getLast2Digits = get2lasts(arrayOfAbsolut);
+    const last2DigitsNumber = Number(getLast2Digits.join(''));
+    if (arrayOfAbsolut && arrayOfAbsolut.length > 2 && arrayOfAbsolut[arrayOfAbsolut.length - 1] === 0 && arrayOfAbsolut[arrayOfAbsolut.length - 2] === 0 || arrayOfAbsolut.length > 2 && last2DigitsNumber % 4 === 0) {
         return true;
     }
     else {
@@ -42,6 +56,12 @@ let verifyAll = () => {
     }
     else {
         console.log("It not is Divisible by 3");
+    }
+    if (veriFyDivisibilityBy4(arrayOfAbsolut) === true) {
+        console.log("It is Divisible by 4");
+    }
+    else {
+        console.log("It not is Divisible by 4");
     }
 };
 verifyAll();
