@@ -50,6 +50,14 @@ let veriFyDivisibilityBy5 = (arrayOfAbsolut) => {
         return false;
     }
 };
+let veriFyDivisibilityBy6 = (arrayOfAbsolut) => {
+    if (veriFyDivisibilityBy2(arrayOfAbsolut) === true && veriFyDivisibilityBy3(arrayOfAbsolut) === true) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
 greetings();
 let verifyAll = () => {
     let arrayOfAbsolut = getNumberAndConvertToArray();
@@ -76,6 +84,12 @@ let verifyAll = () => {
     }
     else {
         console.log("It not is Divisible by 5");
+    }
+    if (veriFyDivisibilityBy6(arrayOfAbsolut) === true) {
+        console.log("It is Divisible by 6");
+    }
+    else {
+        console.log("It not is Divisible by 6");
     }
 };
 verifyAll();

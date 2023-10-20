@@ -51,6 +51,15 @@ let veriFyDivisibilityBy5 = (arrayOfAbsolut:any)=>{
     }
 }
 
+let veriFyDivisibilityBy6 = (arrayOfAbsolut:any)=>{
+    if(veriFyDivisibilityBy2(arrayOfAbsolut) ===true && veriFyDivisibilityBy3(arrayOfAbsolut) ===true ){
+        return true
+    }else{           
+        return false
+    }
+}
+
+
 
 greetings()
 
@@ -60,6 +69,7 @@ let verifyAll= () =>{
     if(veriFyDivisibilityBy3(arrayOfAbsolut)===true){ console.log("It is Divisible by 3")}else{ console.log("It not is Divisible by 3")}
     if(veriFyDivisibilityBy4(arrayOfAbsolut)===true){ console.log("It is Divisible by 4")}else{ console.log("It not is Divisible by 4")}
     if(veriFyDivisibilityBy5(arrayOfAbsolut)===true){ console.log("It is Divisible by 5")}else{ console.log("It not is Divisible by 5")}
+    if(veriFyDivisibilityBy6(arrayOfAbsolut)===true){ console.log("It is Divisible by 6")}else{ console.log("It not is Divisible by 6")}
 
 }
 
