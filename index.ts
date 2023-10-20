@@ -65,11 +65,11 @@ greetings()
 
 let verifyAll= () =>{
     let arrayOfAbsolut = getNumberAndConvertToArray()
-    if(veriFyDivisibilityBy2(arrayOfAbsolut)===true){ console.log("It is Divisible by 2")}else{ console.log("It not is Divisible by 2")}
-    if(veriFyDivisibilityBy3(arrayOfAbsolut)===true){ console.log("It is Divisible by 3")}else{ console.log("It not is Divisible by 3")}
-    if(veriFyDivisibilityBy4(arrayOfAbsolut)===true){ console.log("It is Divisible by 4")}else{ console.log("It not is Divisible by 4")}
-    if(veriFyDivisibilityBy5(arrayOfAbsolut)===true){ console.log("It is Divisible by 5")}else{ console.log("It not is Divisible by 5")}
-    if(veriFyDivisibilityBy6(arrayOfAbsolut)===true){ console.log("It is Divisible by 6")}else{ console.log("It not is Divisible by 6")}
+    veriFyDivisibilityBy2(arrayOfAbsolut)===true? console.log("It is Divisible by 2") : console.log("It not is Divisible by 2")
+    veriFyDivisibilityBy3(arrayOfAbsolut)===true? console.log("It is Divisible by 3") : console.log("It not is Divisible by 3")
+    veriFyDivisibilityBy4(arrayOfAbsolut)===true? console.log("It is Divisible by 4") : console.log("It not is Divisible by 4")
+    veriFyDivisibilityBy5(arrayOfAbsolut)===true? console.log("It is Divisible by 5") : console.log("It not is Divisible by 5")
+    veriFyDivisibilityBy6(arrayOfAbsolut)===true? console.log("It is Divisible by 6") : console.log("It not is Divisible by 6")
 
 }
 
